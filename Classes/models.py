@@ -15,6 +15,9 @@ class GymClass(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['date', 'time']  # Orders by date first, then by time
+
 class Booking(models.Model):
     EXPERIENCE_LEVEL_CHOICES = [
         ('beginner', 'Beginner'),
