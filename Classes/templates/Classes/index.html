@@ -15,6 +15,9 @@
                             <p class="card-text"><strong>Date:</strong> {{ gym_class.date }} at {{ gym_class.time }}</p>
                             <p class="card-text"><strong>Duration:</strong> {{ gym_class.duration }}</p>
                             <p class="card-text"><strong>Price:</strong> ${{ gym_class.price }}</p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <button class="btn btn-primary">Book</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,5 +40,10 @@
     {% endif %}
 </div>
 
+
 <!-- index.html content ends here -->
+{% endblock %}
+
+{% block copyright %}
+    Copyright 2024 Onyx Gym
 {% endblock %}
