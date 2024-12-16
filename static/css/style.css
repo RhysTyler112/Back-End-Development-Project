@@ -1,0 +1,42 @@
+.navbar {
+    background-color: black !important;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-text,
+.navbar .nav-link {
+    color: white !important;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white !important;
+}
+
+.navbar .navbar-toggler {
+    border-color: white !important;
+}
+
+.footer {
+    background-color: black !important;
+    color: white !important;
+}
+
+.footer p {
+    color: white !important;
+}
+
+.footer i {
+    color: white !important;
+}
+
+.footer a {
+    color: white !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ccc !important;
+    text-decoration: underline;
+}
