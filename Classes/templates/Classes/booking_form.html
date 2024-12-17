@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Booking{% endblock title %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h1 class="text-center mb-4">Create a Booking</h1>
+
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.gym_class.label_tag }}
+                {{ form.gym_class }}
+            </div>
+            <div class="form-check mb-3">
+                {{ form.equipment_needed }}
+                {{ form.equipment_needed.label_tag }}
+            </div>
+            <div class="mb-3">
+                {{ form.experience_level.label_tag }}
+                {{ form.experience_level }}
+            </div>
+            <div class="mb-3">
+                {{ form.further_information.label_tag }}
+                {{ form.further_information }}
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">Submit Booking</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}
