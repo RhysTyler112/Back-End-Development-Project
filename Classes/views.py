@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import GymClass, Booking
+from .forms import BookingForm
 
 # Create your views here.
 class ClassesList(generic.ListView):
@@ -10,7 +11,7 @@ class ClassesList(generic.ListView):
     paginate_by = 6
 
 #@login_required
-def create_booking(request):
+def newBooking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
