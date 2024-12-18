@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib import messages
 from django.views import generic
 from .models import GymClass, Booking
 from .forms import BookingForm
@@ -18,16 +19,19 @@ def newBooking(request, gym_class_id):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
+            # Create the booking object but don't save it yet
             booking = form.save(commit=False)
             booking.user = request.user  # Assign the logged-in user to the booking
             booking.gym_class = gym_class  # Assign the GymClass to the booking
             booking.date = gym_class.date  # Assuming GymClass has a 'date' field
             booking.time = gym_class.time  # Assuming GymClass has a 'time' field
             booking.save()
+            # Add a success message
+            messages.success(request, f"Your booking for {gym_class.name} on {gym_class.date} at {gym_class.time} has been confirmed!")
             return redirect('booking_list')  # Redirect to booking list or desired success URL
     else:
          # Prepopulate the form with the GymClass date and time
-        form = BookingForm(initial={'gym_class': gym_class})  # Prepopulate the form with GymClass
+        form = BookingForm(initial={'gym_class': gym_class})  
     
     return render(request, 'Classes/booking_form.html', {'form': form, 'gym_class': gym_class})
 
