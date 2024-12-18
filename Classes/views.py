@@ -42,4 +42,4 @@ class BookingListView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         # Filter bookings for the logged-in user
-        return Booking.objects.filter(user=self.request.user)
+        return Booking.objects.filter(user=self.request.user).order_by('gym_class__date', 'gym_class__time')
