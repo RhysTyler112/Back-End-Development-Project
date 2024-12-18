@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic
 from .models import GymClass, Booking
 from .forms import BookingForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 class ClassesList(generic.ListView):
@@ -25,3 +26,12 @@ def newBooking(request, gym_class_id):
         form = BookingForm(initial={'gym_class': gym_class})  # Prepopulate the form with GymClass
     
     return render(request, 'Classes/booking_form.html', {'form': form, 'gym_class': gym_class})
+
+class BookingListView(LoginRequiredMixin, generic.ListView):
+    model = Booking
+    template_name = "Classes/booking_list.html"
+    context_object_name = "bookings"
+
+    def get_queryset(self):
+        # Filter bookings for the logged-in user
+        return Booking.objects.filter(user=self.request.user)

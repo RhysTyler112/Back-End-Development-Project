@@ -4,7 +4,11 @@
 <div class="container py-5">
     <div class="d-flex flex-column align-items-center pb-5">
         <h1 class="text-center mb-4">Available Gym Classes</h1>
-        <button class="btn btn-primary">View Booked Classes</button>
+        <div class="d-flex justify-content-center mt-3">
+            <a href="{% url 'booking_list' %}"class="btn btn-primary btn-lg" role="button">
+            Booked Classes
+            </a>
+        </div>
     </div>
 
     {% if gym_classes %}
