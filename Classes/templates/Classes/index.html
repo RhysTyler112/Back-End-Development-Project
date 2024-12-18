@@ -19,7 +19,7 @@
                             <p class="card-text"><strong>Duration:</strong> {{ gym_class.duration }}</p>
                             <p class="card-text"><strong>Price:</strong> ${{ gym_class.price }}</p>
                             <div class="d-flex justify-content-center mt-3">
-                                <a href="{% url 'newBooking' %}" class="btn btn-primary btn-lg" role="button">
+                                <a href="{% url 'new_booking' gym_class.id %}"class="btn btn-primary btn-lg" role="button">
                                     Create a Booking
                                 </a>
                             </div>
