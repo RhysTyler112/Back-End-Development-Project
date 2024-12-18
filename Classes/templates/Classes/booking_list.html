@@ -22,9 +22,9 @@
                 {% for booking in bookings %}
                 <tr>
                     <td>{{ booking.gym_class.name }}</td>
-                    <td>{{ booking.date }}</td>
-                    <td>{{ booking.time }}</td>
-                    <td>{{ booking.equipment_needed }}</td>
+                    <td>{{ booking.gym_class.date }}</td>
+                    <td>{{ booking.gym_class.time }}</td>
+                    <td>{{ booking.equipment_needed|yesno:"Needed,None needed" }}</td>
                     <td>{{ booking.experience_level }}</td>
                     <td>{{ booking.further_information }}</td>
                 </tr>

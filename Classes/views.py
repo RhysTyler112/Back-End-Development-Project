@@ -20,9 +20,12 @@ def newBooking(request, gym_class_id):
             booking = form.save(commit=False)
             booking.user = request.user  # Assign the logged-in user to the booking
             booking.gym_class = gym_class  # Assign the GymClass to the booking
+            booking.date = gym_class.date  # Assuming GymClass has a 'date' field
+            booking.time = gym_class.time  # Assuming GymClass has a 'time' field
             booking.save()
             return redirect('booking_list')  # Redirect to booking list or desired success URL
     else:
+         # Prepopulate the form with the GymClass date and time
         form = BookingForm(initial={'gym_class': gym_class})  # Prepopulate the form with GymClass
     
     return render(request, 'Classes/booking_form.html', {'form': form, 'gym_class': gym_class})
