@@ -3,6 +3,7 @@ from django.views import generic
 from .models import GymClass, Booking
 from .forms import BookingForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 class ClassesList(generic.ListView):
@@ -11,7 +12,7 @@ class ClassesList(generic.ListView):
     context_object_name = 'gym_classes'
     paginate_by = 6
 
-#@login_required
+@login_required
 def newBooking(request, gym_class_id):
     gym_class = get_object_or_404(GymClass, id=gym_class_id)  # Fetch the GymClass instance
     if request.method == 'POST':
