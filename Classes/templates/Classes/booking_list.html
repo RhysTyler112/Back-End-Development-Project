@@ -35,6 +35,9 @@
                     <td>{{ booking.equipment_needed|yesno:"Needed,None needed" }}</td>
                     <td>{{ booking.experience_level }}</td>
                     <td>{{ booking.further_information }}</td>
+                    <td>
+                        <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
