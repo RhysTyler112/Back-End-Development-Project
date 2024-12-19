@@ -59,3 +59,10 @@ def edit_booking(request, booking_id):
         form = BookingForm(instance=booking)
     
     return render(request, 'Classes/edit_booking.html', {'form': form, 'booking': booking})
+
+@login_required
+def delete_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    booking.delete()
+    messages.success(request, "Your booking has been deleted.")
+    return redirect('booking_list')

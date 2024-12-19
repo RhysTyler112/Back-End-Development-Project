@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}My Bookings{% endblock title %}
 
@@ -38,6 +39,13 @@
                     <td>
                         <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
                     </td>
+                    <td>
+                        <button class="btn btn-danger btn-sm btn-delete" 
+                                data-id="{{ booking.id }}" 
+                                data-name="{{ booking.gym_class.name }}">
+                            Delete
+                        </button>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -45,5 +53,29 @@
     {% else %}
         <p class="text-center">You have no bookings yet.</p>
     {% endif %}
+
+    <!--  Modal for Delete Confirmation -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Confirm Deletion</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to delete the booking for <strong id="deleteBookingName"></strong>?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <a id="deleteConfirm" class="btn btn-danger">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock content %}
+
+{% block extra_js %}
+<!-- Delete Confirmation Script -->
+<script src="{% static 'js/delete_confirmation.js' %}"></script>
+{% endblock %}
