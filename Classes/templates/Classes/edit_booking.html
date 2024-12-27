@@ -3,13 +3,43 @@
 {% block title %}Edit Booking{% endblock title %}
 
 {% block content %}
-<div class="container mt-4">
-    <h1 class="text-center">Edit Booking</h1>
-    <form method="post" class="mt-4">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-success">Update Booking</button>
-        <a href="{% url 'booking_list' %}" class="btn btn-secondary">Cancel</a>
-    </form>
+<div class="row justify-content-center">
+    <div class="col-md-8 form-area">
+        <h1 class="text-center mb-4 page-title">Edit Booking</h1>
+
+        <form method="POST" novalidate class="booking-form">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.gym_class.label_tag }}
+                {{ form.gym_class }}
+            </div>
+            <div class="mb-3">
+                {{ form.first_name.label_tag }}
+                {{ form.first_name }}
+            </div>
+            <div class="mb-3">
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </div>
+            <div class="mb-3">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="mb-3">
+                {{ form.experience_level.label_tag }}
+                {{ form.experience_level }}
+            </div>
+            <div class="mb-3">
+                {{ form.further_information.label_tag }}
+                <br>
+                {{ form.further_information }}
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-success btn-lg">Update Booking</button>
+                <a href="{% url 'booking_list' %}" class="btn btn-secondary btn-lg">Cancel</a>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock content %}
