@@ -27,7 +27,13 @@ def newBooking(request, gym_class_id):
             booking.time = gym_class.time  # Assuming GymClass has a 'time' field
             booking.save()
             # Add a success message
-            messages.success(request, f"Your booking for {gym_class.name} on {gym_class.date} at {gym_class.time} has been confirmed!")
+            messages.success(
+                request,
+                f"Your booking for {gym_class.name} on {gym_class.date} at {gym_class.time} has been confirmed! "
+                f"<a href='/edit-booking/{booking.id}/' class='btn btn-primary btn-sm'>Edit Booking</a> "
+                f"<a href='/delete-booking/{booking.id}/' class='btn btn-danger btn-sm'>Delete Booking</a>",
+                extra_tags='booking'
+            )
             return redirect('booking_list')  # Redirect to booking list or desired success URL
     else:
          # Prepopulate the form with the GymClass date and time
@@ -53,7 +59,7 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your booking has been updated!")
+            messages.success(request, "Your booking has been updated!", extra_tags='booking')
             return redirect('booking_list')
     else:
         form = BookingForm(instance=booking)
@@ -64,5 +70,5 @@ def edit_booking(request, booking_id):
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, user=request.user)
     booking.delete()
-    messages.success(request, "Your booking has been deleted.")
+    messages.success(request, "Your booking has been deleted.", extra_tags='booking')
     return redirect('booking_list')
