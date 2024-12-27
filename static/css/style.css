@@ -97,3 +97,42 @@ body{
     background-color: #324700;
     color: #FAF9F6;
 }
+/* ----------------------------------booking_form.htmls */
+.booking-form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin: auto;
+}
+
+.form-area {
+    background: #f8f9fa; 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sumbit-btn {
+    background-color: #324700;
+    color: #FAF9F6;
+    margin: 0 auto;
+}
+.sumbit-btn:hover {
+    background-color: #7fb600;
+    color: #000000;}
+
+@media (max-width: 576px) {
+    .form-area {
+        width: 90%; /* Make the form take up more space on small screens */
+    }
+    #id_further_information{
+        width: 85%;
+    }
+    .mb3 {
+        
+    }
+}
+@media (min-width: 1440px) {
+    .form-area {
+        width: 45%;
+    }
+}

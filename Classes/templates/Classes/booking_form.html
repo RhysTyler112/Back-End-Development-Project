@@ -4,26 +4,26 @@
 
 {% block content %}
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-8 form-area">
         <h1 class="text-center mb-4 page-title">Create a Booking</h1>
 
-        <form method="POST" action="{% url 'new_booking' gym_class.id %}" novalidate>
+        <form method="POST" action="{% url 'new_booking' gym_class.id %}" novalidate class="booking-form">
             {% csrf_token %}
             <div class="mb-3">
                 {{ form.gym_class.label_tag }}
                 {{ form.gym_class }}
             </div>
-            <div class="mb-3">
-                {{ form.last_name }}
-                {{ form.last_name.label_tag }}
-            </div>
-            <div class="mb-3">
-                {{ form.first_name }}
+             <div class="mb-3">
                 {{ form.first_name.label_tag }}
+                {{ form.first_name }}
             </div>
             <div class="mb-3">
-                {{ form.email }}
+                {{ form.last_name.label_tag }}
+                {{ form.last_name }}
+            </div>
+            <div class="mb-3">
                 {{ form.email.label_tag }}
+                {{ form.email }}
             </div>
             <div class="mb-3">
                 {{ form.experience_level.label_tag }}
@@ -31,11 +31,12 @@
             </div>
             <div class="mb-3">
                 {{ form.further_information.label_tag }}
+                <br>
                 {{ form.further_information }}
             </div>
 
             <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-lg">Submit Booking</button>
+                <button type="submit" class="btn btn-lg sumbit-btn">Submit Booking</button>
             </div>
         </form>
     </div>
