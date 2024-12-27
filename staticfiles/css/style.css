@@ -177,3 +177,195 @@ body{
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
+
+/* --------------------------------------------------logout.htmls */
+.signout-area{
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 80px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signout-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.signout-message {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.form-signout {
+    display: inline-block;
+}
+
+form .btn-signout{
+    padding: 12px 24px; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    text-transform: uppercase; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form .btn-danger-signout {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+}
+form .btn-danger-signout:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+form .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    margin-left: 10px;
+}
+form .btn-secondary:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* --------------------------------------------------login.htmls */
+.login-area {
+    background: #f8f9fa;
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 30px; 
+    max-width: 600px; 
+    margin: 80px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+.link:hover {
+    color: #0056b3;
+}
+
+.login {
+    display: inline-block;
+    text-align: left;
+}
+
+.login .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login  .btn-danger {
+    background-color: #dc3545; 
+    border: none;
+    color: #fff;
+}
+.login  .btn-danger:hover {
+    background-color: #c82333; 
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px; 
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem; 
+    }
+
+    .btn {
+        font-size: 0.9rem; 
+        padding: 10px 15px;
+    }
+}
+
+/* --------------------------------------------------signup.htmls */
+.signup-area {
+    background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 80px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-title {
+    font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.signup-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.signup {
+    display: inline-block;
+  text-align: left;
+}
+
+.signup.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+  /* Sign-Up button styling */
+.signup .btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+}
+  
+.signup .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+    cursor: pointer;
+}
