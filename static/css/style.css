@@ -100,25 +100,25 @@ body{
 /* Login in and out message */
 .login-message {
     position: absolute;
-    top: 8%; /* Adjust vertical position as needed */
-    left: 20%; /* Move to the center horizontally */
-    transform: translateX(-50%); /* Offset by half its own width */
+    top: 8%; 
+    left: 20%; 
+    transform: translateX(-50%); 
     padding: 1.5rem 2rem;
-    background-color: #d4edda; /* Light green background for success message */
-    color: #155724; /* Dark green text for success message */
-    border: 1px solid #c3e6cb; /* Border matching the background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for visibility */
-    text-align: center; /* Center align the text */
-    max-width: 90%; /* Ensure it fits well on smaller screens */
-    width: 400px; /* Fixed width for larger screens */
+    background-color: #d4edda; 
+    color: #155724; 
+    border: 1px solid #c3e6cb;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    max-width: 90%; 
+    width: 400px; /
 }
 
 /* Optional for smaller screens */
 @media (max-width: 576px) {
     .login-message {
-        width: auto; /* Make the width dynamic on small screens */
-        padding: 1rem; /* Adjust padding */
+        width: auto; 
+        padding: 1rem;
     }
 }
 
@@ -158,4 +158,27 @@ body{
     .form-area {
         width: 45%;
     }
+}
+
+/* --------------------------------------------------booking_list.htmls */
+.btn-collapse {
+    color: #cccccc;
+}
+.btn-collapse:hover {
+    color: #577c00;
+}
+#collapseinfo {
+    color: white;
+    text-align: center;
+}
+/* Boooked, edit and delete message */
+.booking-message {
+    max-width: 600px;
+    width: 100%; 
+    padding: 1rem 1.5rem; 
+    background-color: #855600; 
+    color: #ffffff; 
+    border: 1px solid #f5c2c7; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }

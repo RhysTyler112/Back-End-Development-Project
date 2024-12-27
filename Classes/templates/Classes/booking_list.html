@@ -8,56 +8,59 @@
     <h1 class="text-center mb-4 page-title">My Bookings</h1>
 
     {% if messages %}
-    <div>
-        {% for message in messages %}
-            {% if 'booking' in message.tags %}
-                <div class="alert alert-success">
-                    <p>{{ message|safe }}</p> <!-- Render HTML in the message -->
-                </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+        <div class="d-flex justify-content-center">
+            {% for message in messages %}
+                {% if 'booking' in message.tags %}
+                    <div class="alert booking-message text-center">
+                        <p>{{ message|safe }}</p> 
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     
     {% if bookings %}
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>Gym Class</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Equipment Needed</th>
-                    <th>Experience Level</th>
-                    <th>Further Information</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for booking in bookings %}
-                <tr>
-                    <td>{{ booking.gym_class.name }}</td>
-                    <td>{{ booking.gym_class.date }}</td>
-                    <td>{{ booking.gym_class.time }}</td>
-                    <td>{{ booking.equipment_needed|yesno:"Needed,None needed" }}</td>
-                    <td>{{ booking.experience_level }}</td>
-                    <td>{{ booking.further_information }}</td>
-                    <td>
-                        <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
-                    </td>
-                    <td>
-                        <button class="btn btn-danger btn-sm btn-delete" 
-                                data-id="{{ booking.id }}" 
-                                data-name="{{ booking.gym_class.name }}">
-                            Delete
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for booking in bookings %}
+        <div class="col">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ booking.gym_class.name }}</h5>
+                    <p class="card-text">
+                        <strong>Date:</strong> {{ booking.gym_class.date }}<br>
+                        <strong>Time:</strong> {{ booking.gym_class.time }}<br>
+                        <strong>Experience Level:</strong> {{ booking.experience_level }}<br>
+                        <button class="btn btn-collapse" type="button" 
+                        data-bs-toggle="collapse" data-bs-target="#collapseinfo" 
+                        aria-expanded="false" aria-controls="collapseinfo">
+                        <strong>Click for-Further Information:</strong> 
                         </button>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <p class="text-center">You have no bookings yet.</p>
+                        <div class="collapse" id="collapseinfo">
+                            <div class="card card-body">
+                                {{ booking.further_information }}
+                            </div>
+                          </div>
+                    </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="{% url 'edit_booking' booking.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <button class="btn btn-danger btn-sm btn-delete" 
+                            data-id="{{ booking.id }}" 
+                            data-name="{{ booking.gym_class.name }}">
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+        {% else %}
+        <div class="alert alert-warning text-center">
+            No bookings found.
+        </div>
     {% endif %}
+
 
     <!--  Modal for Delete Confirmation -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
