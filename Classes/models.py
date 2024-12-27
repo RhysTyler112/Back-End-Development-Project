@@ -28,13 +28,16 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to the user who made the booking
     gym_class = models.ForeignKey(GymClass, on_delete=models.CASCADE)  # Link to the GymClass
+    first_name = models.CharField(max_length=50, default='FirstName')  # Required first name
+    last_name = models.CharField(max_length=50, default='LastName')  # Required last name
+    email = models.EmailField(max_length=254, blank=True, null=True)  # Optional email
     experience_level = models.CharField(
         max_length=15, choices=EXPERIENCE_LEVEL_CHOICES, default='beginner'
     )  # Experience level as drop down box options
     further_information = models.TextField(blank=True, null=True)  # Additional information field
 
     def __str__(self):
-        return f"Booking by {self.user.username} for {self.gym_class.name}"
+        return f"Booking by {self.first_name} {self.last_name} for {self.gym_class.name}"
     
     def final_price(self):
         """Determine the price for the booking based on membership status."""
