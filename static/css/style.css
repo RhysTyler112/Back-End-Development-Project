@@ -207,7 +207,7 @@ body{
     display: inline-block;
 }
 
-form .btn {
+form .btn-signout{
     padding: 12px 24px; 
     font-size: 1rem; 
     font-weight: bold; 
@@ -216,12 +216,12 @@ form .btn {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.form .btn-danger {
+.form .btn-danger-signout {
     background-color: #dc3545;
     border: none;
     color: #fff;
 }
-form .btn-danger:hover {
+form .btn-danger-signout:hover {
     background-color: #c82333;
     transform: scale(1.05);
     cursor: pointer;
@@ -237,3 +237,5 @@ form .btn-secondary:hover {
     transform: scale(1.05);
     cursor: pointer;
 }
+
+/* --------------------------------------------------login.htmls */
