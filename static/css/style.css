@@ -99,19 +99,14 @@ body{
 }
 /* Login in and out message */
 .login-message {
-    position: absolute;
-    top: 8%; 
-    left: 20%; 
-    transform: translateX(-50%); 
+    max-width: 600px;
+    width: 100%;
     padding: 1.5rem 2rem;
     background-color: #d4edda; 
     color: #155724; 
     border: 1px solid #c3e6cb;
     border-radius: 8px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-    max-width: 90%; 
-    width: 400px; /
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
 }
 
 /* Optional for smaller screens */
