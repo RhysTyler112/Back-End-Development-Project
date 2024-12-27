@@ -25,30 +25,58 @@
     </div>
 
     {% if gym_classes %}
-        <div class="row">
-            {% for gym_class in gym_classes %}
-                <div class=" col-sm-1 col-md-6 col-lg-4 mb-4 ">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ gym_class.name }}</h5>
-                            <img src="" alt="">
-                            <p class="card-text"><strong>Description:</strong> {{ gym_class.description }}</p>
-                            <p class="card-text"><strong>Date:</strong> {{ gym_class.date }} at {{ gym_class.time }}</p>
-                            <p class="card-text"><strong>Duration:</strong> {{ gym_class.duration }}</p>
-                            <p class="card-text"><strong>Price:</strong> £{{ gym_class.price }}</p>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a href="{% url 'new_booking' gym_class.id %}"class="btn btn-md btn-booking" role="button">
-                                    Create a Booking
-                                </a>
-                            </div>
-                        </div>
+<div class="row">
+    {% for gym_class in gym_classes %}
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ gym_class.name }}</h5>
+                    <img src="" alt="">
+                    <!-- Button to trigger modal -->
+                    <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-light btn-sm mb-2" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#descriptionModal-{{ gym_class.id }}">
+                            View Description
+                        </button>
+                    </div>
+                    <p class="card-text"><strong>Date:</strong> {{ gym_class.date }} at {{ gym_class.time }}</p>
+                    <p class="card-text"><strong>Duration:</strong> {{ gym_class.duration }}</p>
+                    <p class="card-text"><strong>Price:</strong> £{{ gym_class.price }}</p>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="{% url 'new_booking' gym_class.id %}" class="btn btn-md btn-booking" role="button">
+                            Create a Booking
+                        </a>
                     </div>
                 </div>
-            {% endfor %}
+            </div>
         </div>
-    {% else %}
-        <p class="text-center">No gym classes available at the moment.</p>
-    {% endif %}
+
+        <!-- Modal for Gym Class -->
+        <div class="modal fade" id="descriptionModal-{{ gym_class.id }}" tabindex="-1" 
+             aria-labelledby="descriptionModalLabel-{{ gym_class.id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="descriptionModalLabel-{{ gym_class.id }}">
+                            {{ gym_class.name }} - Description
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {{ gym_class.description }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No gym classes available.</p>
+{% endif %}
 
     {% if is_paginated %}
     <nav aria-label="Page navigation" class="mt-4">
