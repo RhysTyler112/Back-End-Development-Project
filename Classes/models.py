@@ -28,10 +28,9 @@ class Booking(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # Link to the user who made the booking
     gym_class = models.ForeignKey(GymClass, on_delete=models.CASCADE)  # Link to the GymClass
-    equipment_needed = models.BooleanField(default=False)  # Tick box for equipment requirement
     experience_level = models.CharField(
         max_length=15, choices=EXPERIENCE_LEVEL_CHOICES, default='beginner'
-    )  # Experience level as tick box options
+    )  # Experience level as drop down box options
     further_information = models.TextField(blank=True, null=True)  # Additional information field
 
     def __str__(self):
