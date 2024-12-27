@@ -239,3 +239,81 @@ form .btn-secondary:hover {
 }
 
 /* --------------------------------------------------login.htmls */
+.login-area {
+    background: #f8f9fa;
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    padding: 30px; 
+    max-width: 600px; 
+    margin: 80px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.login-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.link {
+    color: #007bff;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+.link:hover {
+    color: #0056b3;
+}
+
+.login {
+    display: inline-block;
+    text-align: left;
+}
+
+.login .btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Hover effects */
+}
+
+.login  .btn-danger {
+    background-color: #dc3545; /* Red button */
+    border: none;
+    color: #fff;
+}
+.login  .btn-danger:hover {
+    background-color: #c82333; /* Darker red */
+    transform: scale(1.05); /* Slight zoom effect */
+    cursor: pointer;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px; /* Reduce padding for smaller screens */
+        margin-top: 30px; /* Adjust top margin */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Reduce header size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Smaller button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
