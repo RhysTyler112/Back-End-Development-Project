@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -12,10 +13,10 @@
 
 <div class="container py-5">
     <div class="d-flex flex-column align-items-center pb-5">
-        <h1 class="text-center mb-4">Available Gym Classes</h1>
+        <h1 class="text-center mb-4 page-title">Available Gym Classes</h1>
         <div class="d-flex justify-content-center mt-3">
-            <a href="{% url 'booking_list' %}"class="btn btn-primary btn-lg" role="button">
-            Booked Classes
+            <a href="{% url 'booking_list' %}"class="btn btn-lg btn-view-booking" role="button">
+            View my Bookings
             </a>
         </div>
     </div>
@@ -23,16 +24,17 @@
     {% if gym_classes %}
         <div class="row">
             {% for gym_class in gym_classes %}
-                <div class="col-md-4 mb-4">
+                <div class=" col-sm-1 col-md-6 col-lg-4 mb-4 ">
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">{{ gym_class.name }}</h5>
+                            <img src="" alt="">
                             <p class="card-text"><strong>Description:</strong> {{ gym_class.description }}</p>
                             <p class="card-text"><strong>Date:</strong> {{ gym_class.date }} at {{ gym_class.time }}</p>
                             <p class="card-text"><strong>Duration:</strong> {{ gym_class.duration }}</p>
-                            <p class="card-text"><strong>Price:</strong> ${{ gym_class.price }}</p>
+                            <p class="card-text"><strong>Price:</strong> £{{ gym_class.price }}</p>
                             <div class="d-flex justify-content-center mt-3">
-                                <a href="{% url 'new_booking' gym_class.id %}"class="btn btn-primary btn-lg" role="button">
+                                <a href="{% url 'new_booking' gym_class.id %}"class="btn btn-md btn-booking" role="button">
                                     Create a Booking
                                 </a>
                             </div>

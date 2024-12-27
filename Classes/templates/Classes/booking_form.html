@@ -5,7 +5,7 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-8">
-        <h1 class="text-center mb-4">Create a Booking</h1>
+        <h1 class="text-center mb-4 page-title">Create a Booking</h1>
 
         <form method="POST" action="{% url 'new_booking' gym_class.id %}" novalidate>
             {% csrf_token %}
