@@ -1,11 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 # Create your models here.
 
 class GymClass(models.Model):
     name = models.CharField(max_length=255)  # Name of the class
+    featured_image = CloudinaryField('image', default='placeholder')
     description = models.TextField()  # Detailed description of the class
     time = models.TimeField()  # Time of the class
     date = models.DateField()  # Date of the class
