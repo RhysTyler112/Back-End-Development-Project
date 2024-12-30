@@ -32,14 +32,15 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ gym_class.name }}</h5>
                     <div>
-                        {% if "placeholder" in post.featured_image.url %}
+                        {% if "placeholder" in gym_class.featured_image.url %}
                         <img class="card-img-top" src="{% static 'images/default.jpg' %}"
                             alt="placeholder image">
                         {% else %}
-                        <img class="card-img-top" src=" {{ post.featured_image.url }}"
-                            alt="{{ post.title }}">
+                        <img class="card-img-top" src=" {{ gym_class.featured_image.url }}"
+                            alt="{{ gym_class.name}}">
                         {% endif %}
                     </div>
+                    <br>
                     <!-- Button to trigger modal -->
                     <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-light btn-sm mb-2" 
