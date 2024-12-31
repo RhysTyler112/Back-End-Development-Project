@@ -276,7 +276,7 @@ In the event of a bad response from the server the error handler will render a p
 | Book a class | Create a new booking for a class                      |                  |                                                        |                                                                       |
 
 ## Future Implementation
-
+Planned for future, the custoemr could pre pay for the class ahead of time through the webiste instead of paying at the front desk. They could buy and add credits to thier account, e.g 10 credits to be redeemed on upto 10 class in the future. When the customer signs up they could choose a memebership plan, 3,6 or 12 month options and have the memebership fee taken automatically out of their account each month.
 
 # Technologies
 
@@ -304,8 +304,6 @@ In the event of a bad response from the server the error handler will render a p
 <br><br>
 
 ## Tools
-
-
 
 * Figma - used to create wireframes.
 * Diagrams.net - used to create DB schema.
