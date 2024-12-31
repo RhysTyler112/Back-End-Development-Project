@@ -318,7 +318,7 @@ form .btn-secondary:hover {
     }
 }
 
-/* --------------------------------------------------signup.htmls */
+/* --------------------------------------------------signup.html */
 .signup-area {
     background: #f8f9fa;
   border: 1px solid #ddd;
@@ -368,4 +368,45 @@ form .btn-secondary:hover {
     background-color: #c82333;
     transform: scale(1.05);
     cursor: pointer;
+}
+
+/* --------------------------------------------------404.html */
+.error-container {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 600px;
+    margin: 80px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.error-code {
+    font-size: 5rem;
+    color: #dc3545; /* Red color for error code */
+    font-weight: bold;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-home {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-home:hover {
+    background-color: #0056b3; /* Darker blue */
+    transform: scale(1.05);
 }

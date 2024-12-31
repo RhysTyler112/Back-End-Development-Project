@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404 - Page Not Found{% endblock title %}
+
+{% block content %}
+<div class="container error-container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <div class="error-code">404</div>
+            <p class="error-message">Oops! The page you’re looking for doesn’t exist.</p>
+            <a href="{% url 'home' %}" class="btn btn-home">Go Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block copyright %}
+    Copyright 2024 Onyx Gym
+{% endblock %}
