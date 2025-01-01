@@ -28,442 +28,92 @@
 
 ## HTML Validation
 
-All pages pass HTML Validation at [W3C markup validation service](https://validator.w3.org/) with no errors or warnings. There was 1 warning for the flash messages section didn't contain a heading which it did, so a google search suggested to change the section element into a normal div.
+All pages pass HTML Validation at [W3C markup validation service](https://validator.w3.org/) with no site breaking errors or warnings. 
 
 
 <summary>Homepage</summary>
 <br>
-<img src="">
-
-<summary>My Sessions</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/my-sessions-html-checker.png">
+<img src="static/README/validation/homepage-checker.png">
 
 <summary>Create a Booking</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/pt-sessions-html-checker.png">
+<img src="static/README/validation/create-booking-checker.png">
 
 <summary>My Bookings</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/manage-html-checker.png">
+<img src="static/README/validation/my-bookings-checker.png">
 
 <summary>Log In</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/login-html-checker.png">
+<img src="static/README/validation/login-checker.png">
 
 <summary>Log Out</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/login-html-checker.png">
+<img src="static/README/validation/logout-checker.png">
 
 <summary>Register</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/register-html-checker.png">
+There was 4 errors on the registar html do to the html format used by allauth that I can not chanage, this is something I look to update myself in the future.
+<br>
+<img src="static/README/validation/registar-checker.png">
 
 <summary>Edit Booking</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/edit-session-html-checker.png">
+<img src="static/README/validation/edit-booking-checker.png">
 
 <summary>404 Error</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/error404-html-checker.png">
+Had to check the code manually for this one as checking via url would bring up IO Error: HTTP resource not retrievable. There are 2 errors showing due to it not liking the Django syntax for links. Otherwise all working correctly with no working issues.
+<br>
+<img src="static/README/validation/404-checker.png">
 
 <summary>500 Error</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/error500-html-checker.png">
+<img src="#">
 <br><br>
 
 ## CSS Validation
 
 All pages pass CSS Validation at [W3C CSS validation service](https://jigsaw.w3.org/css-validator/) with no errors or warnings.
 
-<details>
+
 <summary>CSS Validation</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/css-validation.png">
-</details>
+<img src="static/README/validation/css-checker.png">
 <br><br>
 
 ## JS Validation
 
-Custom JS script file run through [JShint](https://jshint.com/) for validation. Shows 'M' variable as undefined but as this is part of the script given from the materialize documentation I have chosen to ignore it as the components work as expected.
+Custom JS script file run through [JShint](https://jshint.com/) for validation. Shows one undefined but as this is part of the script get bootstap modal to work and one warning I have chosen to ignore these as the components work as expected.
 
-<details>
 <summary>JS Validation</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/jshint.png">
-</details>
+<img src="static/README/validation/js-checker.png">
 <br><br>
 
 ## CI Python Linter
 
 All python files run through CI PEP8 Linter and passed with no warnings, with the exception of the routes file. This file contains three conditionals that check a paramater is not True using the expression '!='. The linter suggests to use if not but trying to change it to this and the code doesn't work so I have chosen to overlook it. I have ommited a screenshot of the env file as not to disclose the variables for security but this also passed.
 
-<details>
-<summary>Routes.py</summary>
+
+<summary>models.py</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/ci-linter-routes.png">
-</details>
-<details>
-<summary>Models.py</summary>
+<img src="">
+
+<summary>views.py</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/ci-linter-models.png">
-</details>
-<details>
+<img src="">
+
 <summary>__init__.py</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/ci-linter-init.png">
-</details>
-<details>
-<summary>Run.py</summary>
+<img src="">
+
+<summary>urls.py</summary>
 <br>
-<img src="eliteptpro/docs/validation-images/ci-linter-run.png">
-</details>
+<img src="">
+<br>
+<summary>form.py</summary>
+<br>
+<img src="">
 <br><br>
 
-## Lighthouse
-
-<details>
-<summary>Homepage - Best practices has a lower score due to low resolution of slider images, this is intentional to reduce load time. Also for aspect ratio on logo image but in my opinion is visually ok.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-homepage.png">
-</details>
-<details>
-<summary>Register - Good Scores.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-register.png">
-</details>
-<details>
-<summary>Log In - Good Scores.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-login.png">
-</details>
-<details>
-<summary>My Sessions - Good Scores.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-my-sessions.png">
-</details>
-<details>
-<summary>PT Sessions - Good Scores.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-pt-sessions.png">
-</details>
-<details>
-<summary>Manage - Good Scores.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-manage.png">
-</details>
-<details>
-<summary>Book Session - Lower accessibility score due to lighthouse reporting no form labels on select elements when they are present.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-book-session.png">
-</details>
-<details>
-<summary>Edit Session - Lower accessibility score due to lighthouse reporting no form labels on select elements when they are present.</summary>
-<br>
-<img src="eliteptpro/docs/validation-images/lighthouse-edit-session.png">
-</details>
-<details>
-<summary>Add Holiday - Good Scores.</summary>
-<img src="eliteptpro/docs/validation-images/lighthouse-holiday.png">
-</details>
-<details>
-<summary>Edit User - Good Scores.</summary>
-<img src="eliteptpro/docs/validation-images/lighthouse-edit-user.png">
-</details>
-<details>
-<summary>404 Page - Lower SEO score due to lack of meta description but as this is just an error handler page I think it is unneccesary.</summary>
-<img src="eliteptpro/docs/validation-images/lighthouse-404.png">
-</details>
-<details>
-<summary>500 Page - Lower SEO score due to lack of meta description but as this is just an error handler page I think it is unneccesary.</summary>
-<img src="eliteptpro/docs/validation-images/lighthouse-500.png">
-</details>
-<br><br>
-
-## WAVE Accessibility Checker
-
-<details>
-<summary>Homepage - No errors or contrast errors, two alerts for redundant links as Home link is present in both Nav logo and Nav link, Login link is present in both Nav and CTA button. Also an alert that a paragraph could be a heading when its not meant to be.</summary>
-<img src="eliteptpro/docs/validation-images/wave-homepage.png">
-</details>
-<details>
-<summary>Register - No errors or contrast errors, same three alerts as Homepage.</summary>
-<img src="eliteptpro/docs/validation-images/wave-register.png">
-</details>
-<details>
-<summary>Log In - No errors or contrast errors, alert for redundant home link and the same alert for paragraph could be heading.</summary>
-<img src="eliteptpro/docs/validation-images/wave-login.png">
-</details>
-<details>
-<summary>My Sessions - No errors or contrast errors, alert for redundant home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-my-sessions.png">
-</details>
-<details>
-<summary>Book Session - No contrast errors. Errors showing for empty button on datepicker, add missing form labels. I believe these to be bugs from the materialize framework. As the button is not present in my code and the labels are in my code for the select elements but when rendered are input elements instead of select. Same alert for home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-book-session.png">
-</details>
-<details>
-<summary>Edit Session - No contrast errors. Errors showing for empty button on datepicker, add missing form labels. I believe these to be bugs from the materialize framework. As the button is not present in my code and the labels are in my code for the select elements but when rendered are input elements instead of select. Same alert for home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-edit-session.png">
-</details>
-<details>
-<summary>PT Sessions - No errors or contrast errors, same alert for redundant home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-pt-sessions.png">
-</details>
-<details>
-<summary>Add Holiday - No contast errors. Error for empty button on datepicker again believed to be a materialize bug as its not in my code. Same alert for redundant home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-holiday.png">
-</details>
-<details>
-<summary>Manage - No errors or contrast errors. Same alert for redundant home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-manage.png">
-</details>
-<details>
-<summary>Edit User - No errors or contrast errors. Same alert for redundant home link.</summary>
-<img src="eliteptpro/docs/validation-images/wave-edit-user.png">
-</details>
-<details>
-<summary>404 Page - No errors, contrast errors or alerts.</summary>
-<img src="eliteptpro/docs/validation-images/wave-404.png">
-</details>
-<details>
-<summary>500 Page - No errors, contrast errors or alerts.</summary>
-<img src="eliteptpro/docs/validation-images/wave-500.png">
-</details>
-
-
-# User Story Testing
-
-## General
-
-| User Story                                                                                | Feature                                                                                                                                    |
-| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| I want to immediately identify the purpose of the site.                                   | Logo in header displaying app name, background images of homepage and heading on homepage.                                                 |
-| I want navigation to be simple and intuitive.                                             | Nav links follow standard conventions of right aligned and common hamburger icon for mobile devices. Links differ dependent on user level. |
-| I want to be able to view the site on any device.                                         | Site is fully responsive with the aid of materialize frameworks grid system.                                                               |
-| I want to be able to easily navigate to the homepage incase of broken link or site error. | 404 and 500 pages rendered in the case of bad links or server errors.                                                                      |
-<br><br>
-
-## Logged Out 
-
-| User Story                                        | Feature                                                                    |
-| ------------------------------------------------- | -------------------------------------------------------------------------- |
-| I want to be able to login/signup to the service. | Both log in and register features available, CTA on homepage or in navbar. |
-<br><br>
-
-## Member User
-
-| User Story                                                                      | Feature                                                                                                               |
-| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
-| I want to be able to book a 1 hour PT session.                                  | Booking form available.                                                                                               |
-| I want to be able to see sessions i have currently booked and edit/delete them. | My sessions page displayed all booked sessions with buttons to edit/delete. Edit button renders new form for editing. |
-<br><br>
-
-## Employee/PT User
-
-| User Story                                                        | Feature                                                                                                         |
-| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| I want to be able to see what sessions users have booked with me. | PT sessions page displays all booked sessions.                                                                  |
-| I want to be able to set days that I am unavailable for.          | Add holiday button present on PT sessions page, renders form for adding holiday.                                |
-| I want to be able to edit/delete user sessions I cannot make.     | Edit and delete buttons present on each card displaying sessions. Edit button renders form for editing session. |
-<br><br>
-
-## Management User
-
-| User Story                                                                           | Feature                                                                                                                                                        |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| I want to be able to edit/delete users both members of gym and trainers.             | All users displayed on manage page with edit and delte buttons. Edit button renders form to edit user. Trainers displayed in another table with delete button. |
-| I want to be able to manage holidays of the trainers.                                | All holidays displayed in table with button to delete holiday.                                                                                                 |
-| I want to be able to see all sessions booked with PT employees and edit/delete them. | All sessions booked displayed in table with edit and delete buttons. Edit button renders form to edit session.                                                 |
-<br><br>
-
-# Manual Testing
-
-| Feature/Test                                          | Expected Outcome.                                                                                                        | Result |
-| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
-| Logo in Navbar.                                       | Redirect to Homepage.                                                                                                    | Pass.  |
-| Nav Links.                                            | Redirect to relevant pages.                                                                                              | Pass.  |
-| Side Nav                                              | Navbar collapes to Sidenav on mobile devices with correct links.                                                         | Pass.  |
-| Footer Links                                          | Open relevant sites in new tabs                                                                                          | Pass.  |
-| CTA Login button on Homepage.                         | Redirects to login page.                                                                                                 | Pass.  |
-| Login Form - empty.                                   | Will not submit if empty fields.                                                                                         | Pass.  |
-| Login Form - incorrect username.                      | Form submits but doesn't login, gives falsh message displaying reason.                                                   | Pass.  |
-| Login Form - incorrect password.                      | Form submits but doesn't login, gives falsh message displaying reason.                                                   | Pass.  |
-| Login Form - correct details.                         | Form submits and redirects user to relevant page for that user.                                                          | Pass.  |
-| Register link on Log In Form.                         | Redirects to register page.                                                                                              | Pass.  |
-| Register Form - empty.                                | Will not submit if empty fields.                                                                                         | Pass.  |
-| Register Form - username exists.                      | Form submits but does not register user, flash message display username already exists.                                  | Pass.  |
-| Register Form - new user details.                     | Form submits adding new user and redirects to Homepage with flash message asking to Log In.                              | Pass.  |
-| Log In link on Register Form                          | Redirects to Log In page.                                                                                                | Pass.  |
-| Log Out Button.                                       | Logs user out, clears session cookies and redirects to Homepage.                                                         | Pass.  |
-| My sessions page - edit session button.               | Redirects to edit session page.                                                                                          | Pass.  |
-| My sessions page - delete session button.             | Modal pops up prompting user to confirm change as a defense.                                                             | Pass.  |
-| Book Session form - empty.                            | Will not submit if empty fields.                                                                                         | Pass.  |
-| Book Session form - trainers selection.               | Trainer dropdown populated with options for trainers in database.                                                        | Pass.  |
-| Book Session form - datepicker.                       | Holidays booked by selected trainer disabled in datepicker.                                                              | Pass.  |
-| Book session form - times.                            | Times already booked for that trainer on selected date disabled.                                                         | Pass.  |
-| Book session form - submit.                           | Form submits and redirected to my sessions page with session displayed.                                                  | Pass.  |
-| Edit session form.                                    | Currently booked details displayed above form.                                                                           | Pass.  |
-| Edit Session form - empty.                            | Will not submit if empty fields.                                                                                         | Pass.  |
-| Edit Session form - trainers selection.               | Trainer dropdown populated with options for trainers in database.                                                        | Pass.  |
-| Edit Session form - datepicker.                       | Holidays booked by selected trainer disabled in datepicker.                                                              | Pass.  |
-| Edit session form - times.                            | Times already booked for that trainer on selected date disabled.                                                         | Pass.  |
-| Edit session form - submit.                           | Form submits and redirected to relevant page for user level. I.e member/trainer/admin.                                   | Pass.  |
-| PT sessions page - edit session button.               | Redirects to edit session page.                                                                                          | Pass.  |
-| PT sessions page - delete session button.             | Modal pops up prompting user to confirm change as a defense.                                                             | Pass.  |
-| PT sessions page - add holiday button.                | Redirects to add holiday page.                                                                                           | Pass.  |
-| PT sessions page - delete button.                     | Modal pops up prompting user to confirm change as a defense.                                                             | Pass.  |
-| Add Holiday form - empty.                             | Will not submit if empty fields.                                                                                         | Pass.  |
-| Add Holiday form - submit button.                     | Form submits and redirects to PT sessions page with new holiday displayed.                                               | Pass.  |
-| Manage page - edit user button.                       | Redirects to edit user page.                                                                                             | Pass.  |
-| Manage page - delete user button.                     | Modal pops up prompting user to confirm change as a defense, deletes trainer, holidays and sessions that are applicable. | Pass.  |
-| Manage page - delete trainer button.                  | Modal pops up prompting user to confirm change as a defense, deletes holidays and sessions that are applicable.          | Pass.  |
-| Manage page - edit session button.                    | Redirects to edit session page.                                                                                          | Pass.  |
-| Manage page - delete session button.                  | Modal pops up prompting user to confirm change as a defense.                                                             | Pass.  |
-| Type a non-existent page path.                        | Redirects to 404 page.                                                                                                   | Pass.  |
-| Enter url to edit session when logged out.            | Redirects to 500 page.                                                                                                   | Pass.  |
-| 404 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
-| 500 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
-| Enter url to edit session of another user.            | Redirects to Homepage, flash message not authorized.                                                                     | Pass.  |
-| Enter url to delete session of another user.          | Redirects to Homepage, flash message not authorized.                                                                     | Pass.  |
-| Enter url for admin page when not logged in as admin. | Redirects to Homepage, flash message not authorized.                                                                     | Pass.  |
-<br><br>
-
-# Responsiveness
-
-Tested across various devices using Google Dev Tools and real world devices for expected look and layout. 
-
-<details>
-<summary>Samsung S22 Ultra</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| Samsung S22 Ultra| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>IPhone 12 Pro</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| IPhone 12 Pro| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>IPhone 6/7/8</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| IPhone 6/7/8| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>IPad Pro 2</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| IPad Pro 2| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>Nest Hub</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| Nest Hub| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>Samsung Galaxy A51/71</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| Samsung Galaxy A51/71| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<details>
-<summary>Surface Pro 7</summary>
-<br>
-
-| Device | Page | Result |
-| ----------- | ----------- |---------------- |
-| Surface Pro 7| Homepage | &check; |
-| | Log In | &check; |
-| | Register | &check; |
-| | My Sessions | &check; |
-| | PT Sessions | &check; |
-| | Manage | &check; |
-| | Book Session | &check; |
-| | Edit Session | &check; |
-| | Add Holiday | &check; |
-| | Edit User | &check; |
-| | 404 Page | &check; |
-| | 500 Page | &check; |
-</details>
-<br><br>
