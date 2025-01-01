@@ -254,7 +254,7 @@ This is the page the user is directed to once they have made their booking, this
 
 In the event of a page not found the error handler will render a page with a link back to the homepage.
 
-<img src="">
+<img src="static/README/404.png">
 
 <br><br>
 
