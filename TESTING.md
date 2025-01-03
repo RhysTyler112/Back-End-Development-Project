@@ -144,3 +144,49 @@ All python files run through CI PEP8 Linter and passed with no warnings, with th
 <br>
 <img src="static/README/lighthouse/edit-booking-lighthouse.png">
 <br>
+<summary>404</summary>
+<br>
+<img src="">
+<br>
+<summary>500</summary>
+<br>
+<img src="">
+<br>
+
+## WAVE Accessibility Checker
+
+<summary>Homepage - No errors or contrast errors, two alerts for redundant links as Home link is present in both Nav logo and Nav link, one with 2 classes with the same name, this is needed as they are on differnt days.
+</summary>
+<br>
+<img src="static/README/wave/homepage-wave.png">
+<br>
+<summary>Register - No errors, 1 contrast error, seems to be the colour of the text for the sign up link, I beleive this is easy to see but will look to darken in future updates. Same alerts as Homepage.</summary>
+<br>
+<img src="static/README/wave/signup-wave.png">
+<br>
+<summary>Log In - No errors, same contrast and alertes as register.</summary>
+<br>
+<img src="static/README/wave/signin-wave.png">
+<br>
+<summary>My Bookings - </summary>
+<br>
+<img src="">
+<br>
+<summary>New Booking - No errors or contrast errors.</summary>
+<br>
+<img src="static/README/wave/new-booking-wave.png">
+<br>
+<summary>Edit Booking - </summary>
+<br>
+<img src="">
+<br>
+<summary>404 - No errors, 1 contrast error, seems to be the colour of the button that links them back to the homepage
+</summary>
+<br>
+<img src="static/README/wave/404-wave.png">
+<br>
+<summary>500 No errors, 1 contrast error, seems to be the colour of the button that links them back to the homepage
+</summary>
+<br>
+<img src="static/README/wave/500-wave.png">
+<br>
