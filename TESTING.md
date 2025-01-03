@@ -92,23 +92,55 @@ Custom JS script file run through [JShint](https://jshint.com/) for validation. 
 <br><br>
 
 ## CI Python Linter
-
+All python files run through CI PEP8 Linter and passed with no warnings, with the exception of the E501 line too long (84 > 79 characters). I beleive this has no impact on the function of the b page so I have left it as it is.
 
 
 <summary>models.py</summary>
 <br>
-<img src="">
+<img src="static/README/validation/models.py-checker.png">
 <br>
 <summary>views.py</summary>
 <br>
-<img src="">
+<img src="static/README/validation/view.py-checker.png">
 <br>
 <summary>urls.py</summary>
 <br>
-<img src="">
+<img src="static/README/validation/urls.py-checker.png">
 <br>
 <summary>form.py</summary>
 <br>
-<img src="">
+<img src="static/README/validation/form.py-checker.png">
 <br><br>
 
+## Lighthouse
+
+
+<summary>Homepage - Best practices has a lower score as report states "Does not use HTTPS" this is something I am unware how to fix as we are host the project on a 3rd aprty site Heroku.
+</summary>
+<br>
+<img src="static/README/lighthouse/homepage-lighthouse.png">
+<br>
+<summary>Register - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/signup-lighthouse.png">
+<br>
+<summary>Log In - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/login-lighthouse.png">
+<br>
+<summary>Sign Out - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/signout-lighthouse.png">
+<br>
+<summary>My Bookings - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/my-bookings-lighthouse.png">
+<br>
+<summary>New Booking - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/new-booking-lighthouse.png">
+<br>
+<summary>Edit Booking - Good Scores.</summary>
+<br>
+<img src="static/README/lighthouse/edit-booking-lighthouse.png">
+<br>
