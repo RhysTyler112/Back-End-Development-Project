@@ -61,16 +61,11 @@ There was 4 errors on the registar html do to the html format used by allauth th
 <br>
 <img src="static/README/validation/edit-booking-checker.png">
 
-<summary>404 Error</summary>
+<summary>404 and 500 Error</summary>
 <br>
-Had to check the code manually for this one as checking via url would bring up IO Error: HTTP resource not retrievable. There are 2 errors showing due to it not liking the Django syntax for links. Otherwise all working correctly with no working issues.
+Had to check the code manually for this one as checking via url would bring up IO Error: HTTP resource not retrievable. There are 2 errors showing due to it not liking the Django syntax for links. Otherwise all working correctly with no working issues. Both the same with only differnce the 404 or 500 number showing up.
 <br>
 <img src="static/README/validation/404-checker.png">
-
-<summary>500 Error</summary>
-<br>
-<img src="#">
-<br><br>
 
 ## CSS Validation
 
@@ -144,13 +139,15 @@ All python files run through CI PEP8 Linter and passed with no warnings, with th
 <br>
 <img src="static/README/lighthouse/edit-booking-lighthouse.png">
 <br>
-<summary>404</summary>
+<summary>404 - Good Scores. Low SEO due to no meta data, happy with this score as this a simple page to take user back to the homepage if error occurs
+</summary>
 <br>
-<img src="">
+<img src="static/README/lighthouse/404-lighthouse.png">
 <br>
-<summary>500</summary>
+<summary>500 - Good Scores. Low SEO due to no meta data, happy with this score as this a simple page to take user back to the homepage if error occurs
+</summary>
 <br>
-<img src="">
+<img src="static/README/lighthouse/500-lighthouse.png">
 <br>
 
 ## WAVE Accessibility Checker

@@ -262,7 +262,7 @@ In the event of a page not found the error handler will render a page with a lin
 
 In the event of a bad response from the server the error handler will render a page with a link back to the homepage.
 
-<img src="">
+<img src="static/README/500.png">
 
 <br><br>
 
