@@ -165,24 +165,24 @@ All python files run through CI PEP8 Linter and passed with no warnings, with th
 <br>
 <img src="static/README/wave/signin-wave.png">
 <br>
-<summary>My Bookings - </summary>
+<summary>My Bookings -  No errors or contrast errors. Same errors as homepaage.</summary>
 <br>
-<img src="">
+<img src="static/README/wave/my-bookings-wave.png">
 <br>
 <summary>New Booking - No errors or contrast errors.</summary>
 <br>
 <img src="static/README/wave/new-booking-wave.png">
 <br>
-<summary>Edit Booking - </summary>
+<summary>Edit Booking - No errors or contrast errors</summary>
 <br>
-<img src="">
+<img src="static/README/wave/edit-booking-wave.png">
 <br>
 <summary>404 - No errors, 1 contrast error, seems to be the colour of the button that links them back to the homepage
 </summary>
 <br>
 <img src="static/README/wave/404-wave.png">
 <br>
-<summary>500 No errors, 1 contrast error, seems to be the colour of the button that links them back to the homepage
+<summary>500 No errors, same contrast error as 404.
 </summary>
 <br>
 <img src="static/README/wave/500-wave.png">
