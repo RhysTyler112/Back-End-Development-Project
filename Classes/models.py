@@ -35,9 +35,9 @@ class Booking(models.Model):
     # Link to the GymClass
     gym_class = models.ForeignKey(GymClass, on_delete=models.CASCADE)
     # Required first name
-    first_name = models.CharField(max_length=50, default='FirstName')
+    first_name = models.CharField(max_length=50)
     # Required last name
-    last_name = models.CharField(max_length=50, default='LastName')
+    last_name = models.CharField(max_length=50)
     # Optional email
     email = models.EmailField(max_length=254, blank=True, null=True)
     experience_level = models.CharField(

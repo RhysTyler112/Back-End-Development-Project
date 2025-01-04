@@ -5,7 +5,7 @@ This website was created as the 3rd Milestone Project for Code Institute's web a
 [**__link to deployed site here__**](https://gym-onyx-cce045b2bb54.herokuapp.com/)
 <br><br>
 
-<img src="">
+<img src="static/README/head-pic.png">
 <br><br>
 
 # Contents

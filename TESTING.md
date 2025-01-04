@@ -1,4 +1,4 @@
-<img src="">
+<img src="static/README/head-pic.png">
 <br><br>
 
 # Testing documentation for Onyx | Gym Web application.
