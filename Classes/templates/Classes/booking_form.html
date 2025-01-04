@@ -9,30 +9,93 @@
 
         <form method="POST" action="{% url 'new_booking' gym_class.id %}" novalidate class="booking-form">
             {% csrf_token %}
+            
+            <!-- Non-field errors -->
+            {% if form.non_field_errors %}
+                <div class="alert alert-danger">
+                    {% for error in form.non_field_errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            <!-- Gym Class Field -->
             <div class="mb-3">
                 {{ form.gym_class.label_tag }}
                 {{ form.gym_class }}
+                {% if form.gym_class.errors %}
+                    <div class="text-danger">
+                        {% for error in form.gym_class.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
-             <div class="mb-3">
+
+            <!-- First Name Field -->
+            <div class="mb-3">
                 {{ form.first_name.label_tag }}
                 {{ form.first_name }}
+                {% if form.first_name.errors %}
+                    <div class="text-danger">
+                        {% for error in form.first_name.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
+
+            <!-- Last Name Field -->
             <div class="mb-3">
                 {{ form.last_name.label_tag }}
                 {{ form.last_name }}
+                {% if form.last_name.errors %}
+                    <div class="text-danger">
+                        {% for error in form.last_name.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
+
+            <!-- Email Field -->
             <div class="mb-3">
                 {{ form.email.label_tag }}
                 {{ form.email }}
+                {% if form.email.errors %}
+                    <div class="text-danger">
+                        {% for error in form.email.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
+
+            <!-- Experience Level Field -->
             <div class="mb-3">
                 {{ form.experience_level.label_tag }}
                 {{ form.experience_level }}
+                {% if form.experience_level.errors %}
+                    <div class="text-danger">
+                        {% for error in form.experience_level.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
+
+            <!-- Further Information Field -->
             <div class="mb-3">
                 {{ form.further_information.label_tag }}
                 <br>
                 {{ form.further_information }}
+                {% if form.further_information.errors %}
+                    <div class="text-danger">
+                        {% for error in form.further_information.errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
 
             <div class="d-grid">
@@ -42,3 +105,4 @@
     </div>
 </div>
 {% endblock content %}
+
