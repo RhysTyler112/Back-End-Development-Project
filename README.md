@@ -72,7 +72,7 @@ As a gym member I can view a schedule of all available classes so that decide wh
 - Classes are listed in chronological order.
 <br><br>
 
-As a visitor I can ** create an account** so that book and manage classes.
+As a visitor I can create an account so that book and manage classes.
 - A "Sign Up" page with a registration form
 - A "Sign Up" page with a registration form
 <br><br>

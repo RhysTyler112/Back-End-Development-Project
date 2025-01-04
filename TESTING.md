@@ -187,3 +187,27 @@ All python files run through CI PEP8 Linter and passed with no warnings, with th
 <br>
 <img src="static/README/wave/500-wave.png">
 <br>
+<br>
+
+# User Story Testing
+
+## Owners Goals
+
+| User Story                                                                                | Feature                                                                                                                                    |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| I can create new classes so that members can book them.                                   | Form on admin panel to create new class.                                                                                                   |
+| I can view and manage all bookings so that issues or conflicts can be handled.            | On the admin panel a list of all bookings made for all users, with delete button if clustomer can not make it.                             |
+| I can delete a class so that it can not be booked if it is no longer offered.             | A delete button with confimration next to every class with in the admin panel.                                                             |
+| I can edit class information so that update if any changes occur.                         | Next to every class a edit button exist so form can be accessed and updated.                                                               |
+<br><br>
+
+## Visitor Goals
+
+| User Story                                                                                | Feature                                                                                                                                    |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| I can view a schedule of all available classes so that decide which class to attend.      | On home page is a paginated list of classes offered in time and date order.                                                                |
+| I can create an account so that book and manage classes.                                  | Top of page is a link to register form so they can create an accont.                                                                       |
+| I can book a spot so that I can participate.                                              | On each class is a button tha takes user to a form to fill in to book on to the class they wish to attend.                                 |
+| I can see a list of the classes I have booked so that I can manage my schedule            | Once logged in on nav bar is link to "My Booking" where user can see all booed class in time and date order.                               |
+| I can cancel a booking so that no longer attend the class.                                | On my bookings page user has delete button on each class with confirmation to cancel them going to the class.                              |
+<br><br>
