@@ -211,3 +211,41 @@ All python files run through CI PEP8 Linter and passed with no warnings, with th
 | I can see a list of the classes I have booked so that I can manage my schedule            | Once logged in on nav bar is link to "My Booking" where user can see all booed class in time and date order.                               |
 | I can cancel a booking so that no longer attend the class.                                | On my bookings page user has delete button on each class with confirmation to cancel them going to the class.                              |
 <br><br>
+
+# Manual Testing
+
+| Feature/Test                                          | Expected Outcome.                                                                                                        | Result |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Logo in Navbar.                                       | Redirect to Homepage.                                                                                                    | Pass.  |
+| Nav Links.                                            | Redirect to relevant pages.                                                                                              | Pass.  |
+| Side Nav                                              | Navbar collapes to Sidenav on mobile devices with correct links.                                                         | Pass.  |
+| Footer Links                                          | Open relevant sites in new tabs                                                                                          | Pass.  |
+| Login button on Homepage.                             | Redirects to login page.                                                                                                 | Pass.  |
+| Login Form - empty.                                   | Will not submit if empty fields.                                                                                         | Pass.  |
+| Login Form - incorrect username.                      | Form submits but doesn't login, gives falsh message displaying reason.                                                   | Pass.  |
+| Login Form - incorrect password.                      | Form submits but doesn't login, gives falsh message displaying reason.                                                   | Pass.  |
+| Login Form - correct details.                         | Form submits and redirects user to relevant page for that user.                                                          | Pass.  |
+| Login Nav bar                                         | When user login, nav remove register and login with my bookings and sign out.                                            | Pass.  |
+| Register link on Log In Form.                         | Redirects to register page.                                                                                              | Pass.  |
+| Register Form - empty.                                | Will not submit if empty fields.                                                                                         | Pass.  |
+| Register Form - username exists.                      | Form submits but does not register user, flash message display username already exists.                                  | Pass.  |
+| Register Form - new user details.                     | Form submits adding new user and redirects to Homepage with flash message asking to Log In.                              | Pass.  |
+| Log In link on Register Form                          | Redirects to Log In page.                                                                                                | Pass.  |
+| Log Out Button.                                       | Logs user out, clears session cookies and redirects to Homepage.                                                         | Pass.  |
+| Log Out Confirmation.                                 | When user click on log out a confirmation appears first verify their action.                                             | Pass.  |
+| My bookings link                                      | Redirects user to page with all there booked classes                                                                     | Pass.  |
+| My bookings page - edit booking button.               | Redirects to edit session page.                                                                                          | Pass.  |
+| My bookings page - delete booking button.             | Modal pops up prompting user to confirm change as a defense.                                                             | Pass.  |
+| My bookings page - loggin.                            | User must be logged in to view booked class, if not log in screen will be presented.                                     | Pass.  |
+| New booking form - empty.                             | Will not submit if empty fields.                                                                                         | Pass.  |
+| New booking form - auto fill class.                   | The class they click to book on to will auto fill the class field.                                                       | Pass.  |
+| New booking form - loggin.                            | User must be logged in to book a class, if not log in screen will be presented.                                          | Pass.  |
+| New booking form - submit.                            | With form correctly filled in and submited, user is redirected to my booking page with message confirmation.             | Pass.  |
+| Edit session form.                                    | Displays current booked details already inputted.                                                                        | Pass.  |
+| Edit Session form - empty.                            | Will not submit if empty fields.                                                                                         | Pass.  |
+| Edit session form - submit.                           | Form submits updates changes and redirected to my booking page with message confirmation.                                | Pass.  |
+| Type a non-existent page path.                        | Redirects to 404 page.                                                                                                   | Pass.  |
+| Enter url to edit session when logged out.            | Redirects to 500 page.                                                                                                   | Pass.  |
+| 404 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
+| 500 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
+<br><br>
