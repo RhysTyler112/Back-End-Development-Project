@@ -43,7 +43,7 @@ This website was created as the 3rd Milestone Project for Code Institute's web a
 
 # User Experience
 
-A local gym "Onyx Gym" required a website so new and current memebers can booked on to the classes that they offer
+A local gym "Onyx Gym" required a website so new and current members can booked on to the classes that they offer
 <br><br>
 
 ## Owners Goals
@@ -67,12 +67,12 @@ As a gym administrator I can edit class information so that update if any change
 - Changes are saved and updated in real-time.
 
 ## Visitor Goals
-As a gym member I can view a schedule of all available classes so that decide which class to attend.
+As a gym member I can view a schedule of all available classes so that I can decide which class to attend.
 - A page displaying the class name, date, time, duration
 - Classes are listed in chronological order.
 <br><br>
 
-As a visitor I can create an account so that book and manage classes.
+As a visitor I can create an account so that I can book and manage classes.
 - A "Sign Up" page with a registration form
 - A "Sign Up" page with a registration form
 <br><br>
@@ -132,7 +132,7 @@ All images were sourced from [Unsplash](https://unsplash.com/)
 
 ## Navbar
 
-The navbar is present across all pages ecxept for custom pages to catch errors. On mobile devices collapses to a hamburger icon which opens as a sidenav. The links visible are dependant on if the user is logged in.
+The navbar is present across all pages except for custom pages to catch errors. On mobile devices it collapses to a hamburger icon which opens as a sidenav. The links visible are dependent on if the user is logged in.
 
 <summary>Navbar signed in</summary>
 <br>
@@ -143,7 +143,7 @@ The navbar is present across all pages ecxept for custom pages to catch errors. 
 <img src="static/README/nav-bar-logout.png">
 
 ## Footer
-Footer is present across all pages ecxept for custom pages to catch errors, with links to gyms potenial socials.
+Footer is present across all pages except for custom pages to catch errors, with links to gyms potential socials.
 
 <br>
 <img src="static/README/footer.png">
@@ -162,7 +162,7 @@ Modals are present wherever a delete button is clicked to defend against acciden
 
 ## Messages
 
-Message appear om the screen to let the user know a certain action has been furfilled. This confirming they have signed in or out and the status of thier bookings.
+Messages appear on the screen to let the user know a certain action has been fulfilled. This confirms they have signed in or out and the status of their bookings.
 
 <summary>Signed In</summary>
 <br>
@@ -195,7 +195,7 @@ Message appear om the screen to let the user know a certain action has been furf
 
 ## Log In 
 
-Log in form is rendered and checks for user in database and password correct. Prompt on form if not already registered with link to register page.
+Login form is rendered and checks for users in the database and password correct. Prompt on form if not already registered with link to register page.
 
 
 <img src="static/README/sign-in.png">
@@ -210,14 +210,14 @@ Log out functionality available to all logged in users, simply clears all sessio
 
 ## Register
 
-Form is rendered to register for the site, checks if user is already in database, if not adds them to database. Prompt on the form if already registered with link to Log In page.
+Form is rendered to register for the site, checks if the user is already in the database, if not adds them to the database. Prompt on the form if already registered with a link to the Log In page.
 
 <img src="static/README/register.png">
 <br><br>
 
 ## Homepage
 
-Homepage is available to all users where they can see all the class that are avaiable with the desciption, date, time, cost and button to book on to the class. If more than 6 classes are avaible there is a pagination to take you to the next page of classes.
+Homepage is available to all users where they can see all the classes that are available with the description, date, time, cost and button to book on to the class. If more than 6 classes are available there is a pagination to take you to the next page of classes.
 
 <summary>Classes</summary>
 <br>
@@ -230,14 +230,14 @@ Homepage is available to all users where they can see all the class that are ava
 
 ## Create a booking page
 
-This is the page the user is directed to once they click creare a booking on the class they wish to attened. If not logged in the user will be promted to login. The user will be asked to input their first, last name, email(optional) thier experice level and a text area if they need to inform the member of staff taking the class of any issue.
+This is the page the user is directed to once they click create a booking on the class they wish to attend. If not logged in the user will be prompted to login. The user will be asked to input their first, last name, email(optional) their experience level and a text area if they need to inform the member of staff taking the class of any issue.
 
 <img src="static/README/create-booking.png">
 <br><br>
 
 ## My Bookings Page
 
-This is the page the user is directed to once they have made their booking, this can also be done from a link in the navbar and also a view my booking button above the list classes. Here the user can view there upcoming classes and make any updates to thier booking or delete the booking if no longer can attend.
+This is the page the user is directed to once they have made their booking, this can also be done from a link in the navbar and also a view my booking button above the list classes. Here the user can view their upcoming classes and make any updates to their booking or delete the booking if they no longer can attend.
 
 <summary>My bookings</summary>
 <br>
@@ -276,7 +276,7 @@ In the event of a bad response from the server the error handler will render a p
 | Book a class | Create a new booking for a class                      |                  |                                                        |                                                                       |
 
 ## Future Implementation
-Planned for future, the custoemr could pre pay for the class ahead of time through the webiste instead of paying at the front desk. They could buy and add credits to thier account, e.g 10 credits to be redeemed on upto 10 class in the future. When the customer signs up they could choose a memebership plan, 3,6 or 12 month options and have the memebership fee taken automatically out of their account each month.
+Planned for the future, the customer could pre pay for the class ahead of time through the website instead of paying at the front desk. They could buy and add credits to their account, e.g 10 credits to be redeemed on up to 10 classes in the future. When the customer signs up they could choose a membership plan, 3,6 or 12 month options and have the membership fee taken automatically out of their account each month.
 
 # Technologies
 
@@ -284,7 +284,7 @@ Planned for future, the custoemr could pre pay for the class ahead of time throu
 
 * HTML5 - for content and structure.
 * CSS3 - for styling.
-* Vanilla JS - for initialization of materialize components and for functions that request and handle data from the backend.
+* Vanilla JS - for initialization of materialised components and for functions that request and handle data from the backend.
 * Python - for the backend functionality.
 * All other assets used:
     - asgiref==3.8.1
@@ -315,7 +315,7 @@ Planned for future, the custoemr could pre pay for the class ahead of time throu
 
 # Testing
 
-For testing please the [Testing](/TESTING.md) documentation.
+For testing please use the [Testing](/TESTING.md) documentation.
 <br><br>
 
 # Deployment
@@ -341,7 +341,7 @@ To deploy to Heroku:
 | PORT | 5000 |
 | SECRET_KEY | mysecretkey |
 
-Actual Enviroment variables not disclosed for security.
+Actual Environment variables not disclosed for security.
 
 ## Forking the GitHub Repository
 <br>
